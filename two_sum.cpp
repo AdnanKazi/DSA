@@ -5,6 +5,7 @@
 using namespace std;
 
 class Solution {
+    
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int n = nums.size();
@@ -26,9 +27,13 @@ int main() {
     std::cout<< "Hello world!";
     Solution s;
     vector<int> sum;
-    vector<int> data = {2,7,11,15};
+    vector<int> data = {2,7,5,4,10,15};
     sum = s.twoSum(data,9);
-    std::cout<< "data:"<< sum<<std::endl;
+
+    //* Display values    
+    for(int i = 0; i < sum.size() ; i++){
+        std::cout<< " data:"<<data[sum[i]];
+    }
 
     return 0;
 }
