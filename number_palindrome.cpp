@@ -9,13 +9,22 @@ class Solution
 public:
     bool isPalindrome(int x)
     {
-        int t;
-        while (x != 0)
-        {
-            t = x % 10;
-        }
-        std::cout << t;
-        return false;
+       int n, num, digit, rev = 0;
+        num = x;
+
+     do
+     {
+         digit = num % 10;
+         rev = (rev * 10) + digit;
+         num = num / 10;
+     } while (num != 0);
+
+     cout << " The reverse of the number is: " << rev << endl;
+
+     if (n == rev)
+         return true;
+     else
+         return false;
     }
 };
 
